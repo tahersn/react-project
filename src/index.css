@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #1d1d1d;
+  @apply text-zinc-300;
+}
+html{min-height: 100%;
+margin:0;
+}
+
+body{
+  height: 100vh;
+  margin:0;
+  }
+
+  #root{
+    height: 100%;
+  }
+
+
