@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-
+import Sidebar from "./Sidebar";
 const Main = () => {
   return (
     <>
-      <Navbar />
-      <div className="h-[calc(100%-5rem)]">
-        <Outlet />
+      <div className="flex h-full">
+        <Sidebar />
+        <div className="w-[calc(100%-14rem)]">
+          <Navbar />
+          <Outlet />
+        </div>
       </div>
     </>
   );
