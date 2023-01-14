@@ -6,7 +6,11 @@ const Home = () => {
   const { events } = useDraggable(ref);
 
   return (
-    <div className="flex h-full overflow-auto " ref={ref} {...events}>
+    <div
+      className="flex h-[calc(100%-5rem)] overflow-auto "
+      ref={ref}
+      {...events}
+    >
       <div className="flex h-80 gap-3 p-8 flex-row cursor-grab">
         <div class="card w-96 bg-indigo-500 shadow-xl">
           <div class="card-body">
@@ -54,6 +58,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <tr>
+        <h1>taher</h1>
+      </tr>
     </div>
   );
 };

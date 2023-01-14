@@ -6,7 +6,7 @@ const Main = () => {
     <>
       <div className="flex h-full">
         <Sidebar />
-        <div className="w-[calc(100%-14rem)]">
+        <div className="w-[calc(100%-14rem)] h-screen">
           <Navbar />
           <Outlet />
         </div>
