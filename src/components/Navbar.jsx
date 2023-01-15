@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <>
-      <div className="h-20 font-serif font-bold bg-black flex row justify-end">
+      <div className="sticky h-20 top-0 z-20 font-serif font-bold bg-primary/60 flex row justify-end backdrop-blur-md transition-colors duration-500 ">
         <div className="flex items-center pr-3 gap-2">
           <div className="form-control">
             <input

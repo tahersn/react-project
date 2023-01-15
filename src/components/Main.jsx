@@ -4,9 +4,9 @@ import Sidebar from "./Sidebar";
 const Main = () => {
   return (
     <>
-      <div className="flex h-full">
+      <div className="flex">
         <Sidebar />
-        <div className="w-[calc(100%-14rem)] h-screen">
+        <div className="w-[calc(100%-14rem)]">
           <Navbar />
           <Outlet />
         </div>
