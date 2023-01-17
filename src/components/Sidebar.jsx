@@ -1,11 +1,12 @@
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import HomeIcon from "@mui/icons-material/Home";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="bg-primary/60 flex flex-col justify-between sticky top-0 h-screen ">
-      <div className="w-56  h-fit top-0 flex flex-col  z-20 ">
+      <div className="w-56  h-fit top-0 flex flex-col  z-25 ">
         <div className=" flex items-center justify-center h-50 row flex-grow-0 w-full">
           <div className="avatar h-12 w-12 my-3">
             <div className="w-24 rounded-full">
@@ -30,7 +31,9 @@ const Sidebar = () => {
             <td>
               <AccountBalanceIcon sx={{ fontSize: 40 }} />
             </td>
-            <td className="text-white font-bold px-3">Users</td>
+            <link className="text-white font-bold px-3" to="/users">
+              Users
+            </link>
           </tr>
         </div>
       </div>
