@@ -68,6 +68,12 @@ const UsersDisplay = () => {
                 >
                   delete
                 </button>
+                <button
+                  onClick={() => (show = !show)}
+                  className="btn btn-ghost btn-xs"
+                >
+                  Add user
+                </button>
               </th>
             </tr>
           ))}
