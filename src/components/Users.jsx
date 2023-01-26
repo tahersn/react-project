@@ -1,14 +1,21 @@
+import { useState } from "react";
 import { useRef } from "react";
 const Users = () => {
   return <UsersDisplay />;
 };
 //users table
-const users = [
-  { name: "taher", age: 23, email: "taher@kedhe.tn" },
-  { name: "taher2", age: 24, email: "taher2@kedhe.tn" },
-];
 
 const UsersDisplay = () => {
+  const [users, setUsers] = useState([
+    { name: "taher", age: 23, email: "taher@kedhe.tn" },
+    { name: "taher2", age: 24, email: "taher2@kedhe.tn" },
+    { name: "aaaaaaa2", age: 21, email: "taher2@kedhe.tn" },
+  ]);
+
+  function deleteUser(index) {
+    setUsers(users.filter((u, i) => i !== index));
+  }
+
   return (
     <div className="overflow-x-auto w-full">
       <table className="table w-full">
@@ -26,8 +33,8 @@ const UsersDisplay = () => {
           </tr>
         </thead>
         <tbody className="text-black">
-          {users.map((user) => (
-            <tr>
+          {users.map((user, i) => (
+            <tr key={i}>
               <th>
                 <label>
                   <input type="checkbox" className="checkbox" />
@@ -55,7 +62,12 @@ const UsersDisplay = () => {
               </td>
               <td>{user.age}</td>
               <th>
-                <button className="btn btn-ghost btn-xs">delete</button>
+                <button
+                  onClick={() => deleteUser(i)}
+                  className="btn btn-ghost btn-xs"
+                >
+                  delete
+                </button>
               </th>
             </tr>
           ))}
@@ -64,4 +76,5 @@ const UsersDisplay = () => {
     </div>
   );
 };
+
 export default Users;
