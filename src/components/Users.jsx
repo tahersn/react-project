@@ -5,14 +5,14 @@ const Users = () => {
 //users table
 const users = [
   { name: "taher", age: 23, email: "taher@kedhe.tn" },
-  { name: "taher", age: 23, email: "taher@kedhe.tn" },
+  { name: "taher2", age: 24, email: "taher2@kedhe.tn" },
 ];
 
 const UsersDisplay = () => {
   return (
     <div className="overflow-x-auto w-full">
       <table className="table w-full">
-        <thead>
+        <thead className="text-black">
           <tr>
             <th>
               <label>
@@ -20,13 +20,13 @@ const UsersDisplay = () => {
               </label>
             </th>
             <th>Name</th>
-            <th>Old</th>
             <th>email</th>
+            <th>Age</th>
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          {users.map((User, i) => {
+        <tbody className="text-black">
+          {users.map((user) => (
             <tr>
               <th>
                 <label>
@@ -38,30 +38,27 @@ const UsersDisplay = () => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="/tailwind-css-component-profile-2@56w.png"
+                        src="./assets/panda.jpg"
                         alt="Avatar Tailwind CSS Component"
                       />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold"> {User.name} </div>
+                    <div className="font-bold">{user.name}</div>
                     <div className="text-sm opacity-50">United States</div>
                   </div>
                 </div>
               </td>
               <td>
-                Zemlak, Daniel and Leannon
+                {user.email}
                 <br />
-                <span className="badge badge-ghost badge-sm">
-                  Desktop Support Technician
-                </span>
               </td>
-              <td>{User.email}</td>
+              <td>{user.age}</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-ghost btn-xs">delete</button>
               </th>
-            </tr>;
-          })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

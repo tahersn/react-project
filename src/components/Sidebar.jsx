@@ -18,23 +18,22 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 mt-9 ">
-          <tr className="w-full flex items-center justify-center rounded-sm transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-600 duration-200">
-            <td>
+          <div className="w-full flex items-center justify-center rounded-sm z-30 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-600 duration-200 ">
+            <div>
               <HomeIcon sx={{ fontSize: 40 }} />
-            </td>
-            <td className="text-white font-bold px-3">
+            </div>
+            <Link to="/Home" className="text-white font-bold px-3">
               Home
-              {/* <span className="badge "> new </span> */}
-            </td>
-          </tr>
-          <tr className="w-full flex  items-center justify-center rounded-sm transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-600 duration-200 ">
-            <td>
+            </Link>
+          </div>
+          <div className="w-full flex  items-center justify-center rounded-sm transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 z-30 hover:bg-indigo-600 duration-200 ">
+            <div>
               <AccountBalanceIcon sx={{ fontSize: 40 }} />
-            </td>
-            <link className="text-white font-bold px-3" to="/users">
+            </div>
+            <Link to="/Users" className="text-white font-bold px-3">
               Users
-            </link>
-          </tr>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="flex pb-2 row justify-center items-center ">

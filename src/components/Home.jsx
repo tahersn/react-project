@@ -78,48 +78,48 @@ const Cards = () => {
   return (
     <div className="flex overflow-hidden " ref={ref} {...events}>
       <div className="flex h-80 gap-3 p-8 flex-row cursor-grab">
-        <div class="card w-96 bg-indigo-500 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
+        <div className="card w-96 bg-indigo-500 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-        <div class="card w-96  bg-orange-600 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
+        <div className="card w-96  bg-orange-600 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-        <div class="card w-96 bg-indigo-500 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
+        <div className="card w-96 bg-indigo-500 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-        <div class="card w-96  bg-orange-600 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
+        <div className="card w-96  bg-orange-600 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-        <div class="card w-96  bg-orange-600 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card title!</h2>
+        <div className="card w-96  bg-orange-600 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Card title!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
