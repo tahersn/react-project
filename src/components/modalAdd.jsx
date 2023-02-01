@@ -22,7 +22,6 @@ const ModalAdd = ({ CloseAdd, users, setUsers }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
-          // value={name}
           onChange={(e) => {
             console.log(user);
             setUser({ ...user, name: e.target.value });
@@ -36,7 +35,6 @@ const ModalAdd = ({ CloseAdd, users, setUsers }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
-          // value={email}
           onChange={(e) => {
             setUser({ ...user, email: e.target.value });
           }}
@@ -49,9 +47,7 @@ const ModalAdd = ({ CloseAdd, users, setUsers }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
-          // value={age}
           onChange={(e) => {
-            // console.log(e.target.value);
             setUser({ ...user, age: e.target.value });
           }}
         />

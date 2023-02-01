@@ -8,6 +8,8 @@ const UsersTable = (props) => {
     setUsers(users.filter((u, i) => i !== index));
   }
 
+  function UpdateUser(index) {}
+
   return (
     <div className="overflow-x-auto w-full">
       <table className="table w-full">
@@ -59,6 +61,12 @@ const UsersTable = (props) => {
                   className="btn btn-ghost btn-xs"
                 >
                   delete
+                </button>
+                <button
+                  onClick={() => UpdateUser(i)}
+                  className="btn btn-ghost btn-xs"
+                >
+                  Update
                 </button>
               </th>
             </tr>

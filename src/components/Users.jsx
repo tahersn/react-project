@@ -11,6 +11,8 @@ const Users = () => {
 
   const [ShowAdd, SetShowAdd] = useState(false);
 
+  const [Showupdate, SetShowUpdate] = useState(false);
+
   const [search, setSearch] = useState("");
 
   function filtredUsers() {
@@ -18,7 +20,11 @@ const Users = () => {
       return users;
     }
     return users.filter((user) => {
-      return user.name.toLowerCase().includes(search.toLowerCase());
+      return (
+        user.name.toLowerCase().includes(search.toLowerCase()) ||
+        user.age.toString().includes(search) ||
+        user.email.toLowerCase().includes(search.toLowerCase())
+      );
     });
   }
 
@@ -51,6 +57,7 @@ const Users = () => {
           CloseAdd={() => SetShowAdd(false)}
         />
       )}
+      {Showupdate && <Updateuser users={users} setUsers={setUsers} />}
       <UsersTable users={filtredUsers()} setUsers={setUsers} />
     </>
   );
