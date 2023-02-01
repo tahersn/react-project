@@ -3,17 +3,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const ModalAdd = ({ CloseAdd, users, setUsers }) => {
-  // const { users, setUsers } = props;
   var [user, setUser] = useState({ name: "", email: "", age: "" });
   const handleClick = () => {
     CloseAdd();
   };
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
 
   function logUser() {
-    console.log(users);
     setUsers([...users, user]);
     CloseAdd();
   }
