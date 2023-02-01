@@ -1,9 +1,23 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const ModalAdd = ({ CloseAdd }) => {
+const ModalAdd = ({ CloseAdd, users, setUsers }) => {
+  // const { users, setUsers } = props;
+  var [user, setUser] = useState({ name: "", email: "", age: "" });
   const handleClick = () => {
     CloseAdd();
   };
+  useEffect(() => {
+    console.log(users);
+  }, [users]);
+
+  function logUser() {
+    console.log(users);
+    setUsers([...users, user]);
+    CloseAdd();
+  }
+
   return (
     <div className="p-8 z-10 absolute flex flex-col justify-center left-[50%] bg-gray-400  rounded-md mt-5  ">
       <div>
@@ -13,6 +27,11 @@ const ModalAdd = ({ CloseAdd }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
+          // value={name}
+          onChange={(e) => {
+            console.log(user);
+            setUser({ ...user, name: e.target.value });
+          }}
         />
       </div>
       <div>
@@ -22,6 +41,10 @@ const ModalAdd = ({ CloseAdd }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
+          // value={email}
+          onChange={(e) => {
+            setUser({ ...user, email: e.target.value });
+          }}
         />
       </div>
       <div>
@@ -31,10 +54,21 @@ const ModalAdd = ({ CloseAdd }) => {
           id="standard-basic"
           label="Standard"
           variant="standard"
+          // value={age}
+          onChange={(e) => {
+            // console.log(e.target.value);
+            setUser({ ...user, age: e.target.value });
+          }}
         />
       </div>
-      <button className="btn btn-primary mt-4">Submit</button>
-      <button className="btn btn-danger mt-4" onClick={() => handleClick()}>
+      <button
+        className="btn btn-primary mt-4"
+        onClick={() => logUser()}
+        type="submit"
+      >
+        Submit
+      </button>
+      <button className="btn btn-danger mt-4" onClick={() => handleClick(user)}>
         Close
       </button>
     </div>
