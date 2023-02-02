@@ -5,7 +5,7 @@ function UpdateUser({ EdUser, SetEdUser, onUpdateClick, CloseUpdate }) {
   // const [newUser, setNewUser] = useState(EdUser);
   function logUser() {
     console.log(EdUser);
-    onUpdateClick(EdUser, i);
+    onUpdateClick(EdUser);
   }
 
   function close() {

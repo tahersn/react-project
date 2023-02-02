@@ -18,8 +18,7 @@ const Users = () => {
 
   const [EdUser, SetEdUser] = useState({});
 
-  const [userIndex, SetUserIndex] = useState(0);
-
+  //search
   function filtredUsers() {
     if (search === "") {
       return users;
@@ -33,9 +32,20 @@ const Users = () => {
     });
   }
 
-  function editUser(u, i) {
-    console.log(u);
+  //edit user
+
+  var [newUsers, setNewUsers] = useState([]);
+  var [prevUser, setPrevUser] = useState({});
+
+  function editUser(u) {
+    let i = users.findIndex((user) => user.name === u.name);
     console.log(i);
+    console.log(u);
+    setUsers((prevUsers) => {
+      newUsers = [...prevUsers];
+      newUsers[i] = { ...prevUser[i], ...u };
+      return newUsers;
+    });
   }
 
   return (
@@ -71,7 +81,7 @@ const Users = () => {
         <UpdateUser
           EdUser={EdUser}
           SetEdUser={SetEdUser}
-          onUpdateClick={(u, userIndex) => editUser(u, userIndex)}
+          onUpdateClick={(u) => editUser(u)}
           CloseUpdate={() => SetShowUpdate(false)}
         />
       )}
@@ -80,12 +90,9 @@ const Users = () => {
         setUsers={setUsers}
         SetShowUpdate={SetShowUpdate}
         SetEdUser={SetEdUser}
-        SetUserindex={SetUserIndex}
       />
     </>
   );
 };
-
-//users table
 
 export default Users;

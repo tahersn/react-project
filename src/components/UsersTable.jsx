@@ -12,6 +12,7 @@ const UsersTable = (props) => {
     SetEdUser(users[i]);
     SetShowUpdate(true);
     // SetUserIndex(i);
+    // console.log(i);
 
     console.log(users[i]);
   }
