@@ -2,13 +2,19 @@ import React from "react";
 import { useState } from "react";
 
 const UsersTable = (props) => {
-  const { users, setUsers } = props;
+  const { users, setUsers, SetShowUpdate, SetEdUser, SetUserIndex } = props;
 
   function deleteUser(index) {
     setUsers(users.filter((u, i) => i !== index));
   }
 
-  function UpdateUser(index) {}
+  function handleClick(i) {
+    SetEdUser(users[i]);
+    SetShowUpdate(true);
+    // SetUserIndex(i);
+
+    console.log(users[i]);
+  }
 
   return (
     <div className="overflow-x-auto w-full">
@@ -63,7 +69,7 @@ const UsersTable = (props) => {
                   delete
                 </button>
                 <button
-                  onClick={() => UpdateUser(i)}
+                  onClick={() => handleClick(i)}
                   className="btn btn-ghost btn-xs"
                 >
                   Update

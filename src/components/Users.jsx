@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ModalAdd from "./modalAdd";
 import UsersTable from "./UsersTable";
+import UpdateUser from "./UpdateUser";
 
 const Users = () => {
   const [users, setUsers] = useState([
@@ -15,6 +16,10 @@ const Users = () => {
 
   const [search, setSearch] = useState("");
 
+  const [EdUser, SetEdUser] = useState({});
+
+  const [userIndex, SetUserIndex] = useState(0);
+
   function filtredUsers() {
     if (search === "") {
       return users;
@@ -26,6 +31,11 @@ const Users = () => {
         user.email.toLowerCase().includes(search.toLowerCase())
       );
     });
+  }
+
+  function editUser(u, i) {
+    console.log(u);
+    console.log(i);
   }
 
   return (
@@ -57,8 +67,21 @@ const Users = () => {
           CloseAdd={() => SetShowAdd(false)}
         />
       )}
-      {Showupdate && <Updateuser users={users} setUsers={setUsers} />}
-      <UsersTable users={filtredUsers()} setUsers={setUsers} />
+      {Showupdate && (
+        <UpdateUser
+          EdUser={EdUser}
+          SetEdUser={SetEdUser}
+          onUpdateClick={(u, userIndex) => editUser(u, userIndex)}
+          CloseUpdate={() => SetShowUpdate(false)}
+        />
+      )}
+      <UsersTable
+        users={filtredUsers()}
+        setUsers={setUsers}
+        SetShowUpdate={SetShowUpdate}
+        SetEdUser={SetEdUser}
+        SetUserindex={SetUserIndex}
+      />
     </>
   );
 };
