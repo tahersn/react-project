@@ -16,6 +16,19 @@ const ModalAdd = ({ CloseAdd, users, setUsers }) => {
   return (
     <div className="p-8 z-10 absolute flex flex-col justify-center left-[50%] bg-gray-400  rounded-md mt-5  ">
       <div>
+        <label htmlFor="name">Id :</label>
+        <input
+          className="name bg-gray-300 h-11 relative border-0 rounded-md outline-none focus:outline-none focus:ring w-full pl-3 pr-3 text-black"
+          id="standard-basic"
+          label="Standard"
+          variant="standard"
+          onChange={(e) => {
+            console.log(user);
+            setUser({ ...user, id: e.target.value });
+          }}
+        />
+      </div>
+      <div>
         <label htmlFor="name">Name :</label>
         <input
           className="name bg-gray-300 h-11 relative border-0 rounded-md outline-none focus:outline-none focus:ring w-full pl-3 pr-3 text-black"

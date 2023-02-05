@@ -5,9 +5,9 @@ import UpdateUser from "./UpdateUser";
 
 const Users = () => {
   const [users, setUsers] = useState([
-    { name: "taher", age: 23, email: "taher@kedhe.tn" },
-    { name: "taher2", age: 24, email: "taher2@kedhe.tn" },
-    { name: "aaaaaaa2", age: 21, email: "taher2@kedhe.tn" },
+    { id: 1, name: "taher", age: 23, email: "taher@kedhe.tn" },
+    { id: 2, name: "taher2", age: 24, email: "taher2@kedhe.tn" },
+    { id: 3, name: "aaaaaaa2", age: 21, email: "taher2@kedhe.tn" },
   ]);
 
   const [ShowAdd, SetShowAdd] = useState(false);
@@ -38,7 +38,7 @@ const Users = () => {
   var [prevUser, setPrevUser] = useState({});
 
   function editUser(u) {
-    let i = users.findIndex((user) => user.name === u.name);
+    let i = users.findIndex((user) => user.id === u.id);
     console.log(i);
     console.log(u);
     setUsers((prevUsers) => {
@@ -46,6 +46,7 @@ const Users = () => {
       newUsers[i] = { ...prevUser[i], ...u };
       return newUsers;
     });
+    SetShowUpdate(false);
   }
 
   return (

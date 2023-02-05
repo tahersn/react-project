@@ -22,7 +22,7 @@ const Sidebar = () => {
             <div>
               <HomeIcon sx={{ fontSize: 40 }} />
             </div>
-            <Link to="/Home" className="text-white font-bold px-3">
+            <Link to="/" className="text-white font-bold px-3">
               Home
             </Link>
           </div>
