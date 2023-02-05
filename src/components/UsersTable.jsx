@@ -46,7 +46,7 @@ const UsersTable = (props) => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="./assets/panda.jpg"
+                        src="./public/panda.jpg"
                         alt="Avatar Tailwind CSS Component"
                       />
                     </div>
